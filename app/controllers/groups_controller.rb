@@ -2,6 +2,8 @@ class GroupsController < ApplicationController
   def index
     @groups = Group.all
   end
+  def show
+    @group = Group.find(params[:id])
   def new
     @group = Group.new
   end
